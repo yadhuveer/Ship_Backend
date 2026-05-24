@@ -77,7 +77,7 @@ export class UserController{
             sameSite: 'lax' 
         });
         
-             console.log("token is cleared")
+             console.log("token is clearedd")
               return res.status(200).json({ message: "Logout successful" });
 
         }catch(err){
