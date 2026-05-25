@@ -42,6 +42,8 @@ jobs:
             docker run -d \
               -p 8000:8000 \
               --name backend \
-              -e MONGO_URI=${{ secrets.MONGO_URI }} \
+              -e MongoUrl=${{ secrets.MONGOURL }} \
               -e JWT_SECRET=${{ secrets.JWT_SECRET }} \
+              -e PORT=${{ secrets.PORT }} \
+              -e fastApiURL=${{ secrets.FASTAPIURL }} \
               ghcr.io/${{ github.repository_owner }}/ship_backend:latest
