@@ -47,7 +47,7 @@ server.use("/voyage",voyageRouter);
 server.get("/user/loginAuth",logInAuth);
 
 server.use((req, res, next) => {
-  console.log("Hit:", req.method, req.url);
+  console.log("Hit::", req.method, req.url);
   next();
 });
 
