@@ -40,7 +40,7 @@ jobs:
             docker rm backend || true
 
             docker run -d \
-              -p 8000:8000 \
+              -p 7000:7000 \
               --name backend \
               -e MongoUrl=${{ secrets.MONGOURL }} \
               -e JWT_SECRET=${{ secrets.JWT_SECRET }} \
