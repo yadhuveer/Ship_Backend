@@ -32,7 +32,7 @@ server.use(express.urlencoded({extended:true}));
 });*/
 
 server.use(cors({
-  origin:["http://localhost:3000", "https://13.233.141.243", "https://shipping-ui-ekiv.vercel.app","http://168.144.158.42","https://168.144.158.42"],
+  origin:["http://localhost:3000", "https://13.233.141.243", "https://shipping-ui-ekiv.vercel.app","http://168.144.158.42","https://168.144.158.42","http://168.144.158.42:3000"],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true                
 }));
