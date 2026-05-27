@@ -39,8 +39,11 @@ jobs:
             docker stop backend || true
             docker rm backend || true
 
+            docker network create shipnet || true
+
             docker run -d \
               -p 7000:7000 \
+              --network shipnet \
               --name backend \
               -e MongoUrl=${{ secrets.MONGOURL }} \
               -e JWT_SECRET=${{ secrets.JWT_SECRET }} \
