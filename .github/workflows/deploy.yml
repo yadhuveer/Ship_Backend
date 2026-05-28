@@ -42,7 +42,7 @@ jobs:
             docker network create shipnet || true
 
             docker run -d \
-              -p 7000:7000 \
+              -p 127.0.0.1:7000:7000 \
               --network shipnet \
               --name backend \
               -e MongoUrl=${{ secrets.MONGOURL }} \
